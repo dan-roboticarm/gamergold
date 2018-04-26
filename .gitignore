@@ -1,0 +1,5 @@
+#ignore node modules
+GamerGold/node_modules/
+
+#ignore build directory
+GamerGold/build/
