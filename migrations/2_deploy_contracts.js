@@ -13,8 +13,8 @@ module.exports = function(deployer,network,accounts)
     var ICO;
 
     deployer.deploy(GamerGold,companyID).then(function(){
-        var starttime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + 300000000;
-        var endtime = starttime + 1000000;
+        var starttime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + 1;
+        var endtime = starttime + 1000000000;
         GG = GamerGold;
         return deployer.deploy(GamerGoldICO, GamerGold.address, tokenwallet, rate, goal, tokenwallet, starttime, endtime).then(function()
         {
